@@ -50,7 +50,7 @@
     $prodotto_3 = new Accessori('Almo Nature Cat Daily Lattina', 17.28, 'https://arcaplanet.vtexassets.com/arquivos/ids/245336/almo-daily-menu-cat-400-gr-vitello.jpg', $gatto, 'Cibo', 'Cibo in scatola per gatti');
     $prodotto_4 = new Accessori('Mangime per Pesci Guppy in Fiocchi', 3.41, 'https://arcaplanet.vtexassets.com/arquivos/ids/272714/tetra-guppy-mini-flakes.jpg', $pesci, 'Cibo', 'Mangime per pesci');
     $prodotto_5 = new Accessori('Voliera Wilma in Legno', 40.99, 'https://arcaplanet.vtexassets.com/arquivos/ids/258384/voliera-wilma1.jpg', $uccelli, 'Accessorio', 'Gabbia per uccelli in legno');
-    $prodotto_6 = new Accessori('Cartucce Filtranti per Filtro EasyCrystal', 15.25, '', $pesci, 'Accessorio', 'Trattamento acqua');
+    $prodotto_6 = new Accessori('Cartucce Filtranti per Filtro EasyCrystal', 15.25, 'https://arcaplanet.vtexassets.com/arquivos/ids/272741/tetra-easycrystal-filterpack-250-300.jpg', $pesci, 'Accessorio', 'Trattamento acqua');
     $prodotto_7 = new Accessori('Kong Classic', 8.99, 'https://arcaplanet.vtexassets.com/arquivos/ids/256599/kong-classic1.jpg', $cane, 'Gioco', 'Gioco per animali');
     $prodotto_8 = new Accessori('Topini di peluche Trixie', 4.90, 'https://arcaplanet.vtexassets.com/arquivos/ids/223852/trixie-gatto-gioco-active-mouse-peluche.jpg', $gatto, 'Gioco', 'Gioco per animali');
 

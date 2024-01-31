@@ -44,9 +44,9 @@
     $pesci = new Categoria('Pesci');
     $uccelli = new Categoria('Uccelli');
 
-    // Creo le istanze della classe prodotto utilizzando la sottoclasse accessori
+    // // Creo le istanze della classe prodotto utilizzando la sottoclasse accessori
     $prodotto_1 = new Accessori('Royal Canin Mini Adult', 8.45, 'https://arcaplanet.vtexassets.com/arquivos/ids/284621/Mini-Adult.jpg?v=638182891693570000', $cane, 'Cibo', 'Croccantini per cani');
-    $prodotto_2 = new Accessori('Almo Nature Holistic Maintenance', 11,60, 'https://arcaplanet.vtexassets.com/arquivos/ids/245173/almo-nature-holistic-cane-adult-medium-pollo-e-riso.jpg', $cane, 'Cibo', 'Croccantini per cani');
+    $prodotto_2 = new Accessori('Almo Nature Holistic Maintenance', 11.60, 'https://arcaplanet.vtexassets.com/arquivos/ids/245173/almo-nature-holistic-cane-adult-medium-pollo-e-riso.jpg', $cane, 'Cibo', 'Croccantini per cani');
     $prodotto_3 = new Accessori('Almo Nature Cat Daily Lattina', 17.28, 'https://arcaplanet.vtexassets.com/arquivos/ids/245336/almo-daily-menu-cat-400-gr-vitello.jpg', $gatto, 'Cibo', 'Cibo in scatola per gatti');
     $prodotto_4 = new Accessori('Mangime per Pesci Guppy in Fiocchi', 3.41, 'https://arcaplanet.vtexassets.com/arquivos/ids/272714/tetra-guppy-mini-flakes.jpg', $pesci, 'Cibo', 'Mangime per pesci');
     $prodotto_5 = new Accessori('Voliera Wilma in Legno', 40.99, 'https://arcaplanet.vtexassets.com/arquivos/ids/258384/voliera-wilma1.jpg', $uccelli, 'Accessorio', 'Gabbia per uccelli in legno');
@@ -54,7 +54,7 @@
     $prodotto_7 = new Accessori('Kong Classic', 8.99, 'https://arcaplanet.vtexassets.com/arquivos/ids/256599/kong-classic1.jpg', $cane, 'Gioco', 'Gioco per animali');
     $prodotto_8 = new Accessori('Topini di peluche Trixie', 4.90, 'https://arcaplanet.vtexassets.com/arquivos/ids/223852/trixie-gatto-gioco-active-mouse-peluche.jpg', $gatto, 'Gioco', 'Gioco per animali');
 
-    // Creo l'array di prodotti
+    // // Creo l'array di prodotti
     $products = [
         $prodotto_1,
         $prodotto_2,
@@ -65,6 +65,48 @@
         $prodotto_7,
         $prodotto_8
     ];
-
-    var_dump($products);
+    // echo "<pre>";
+    // var_dump($products);
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Php OOP 2</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="row">
+                <h1 class="fw-bolder text-uppercase">Arcaplanet</h1>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="row">
+                <?php foreach($products as $product) { ?>
+                    <div class="col-3 my-5">
+                        <div class="card h-100">
+                            <img src=<?php echo $product->img ?> class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title mb-4"><?php echo $product->name ?></h5>
+                                <p class="card-text"> <?php echo "Prezzo : ".$product->price."€" ?> </p>
+                                <p class="card-text"> <?php echo "Categoria : ".$product->category->animal ?> </p>
+                                <p class="card-text"> <?php echo "Tipo : ".$product->type ?> </p>
+                                <p class="card-text"> <?php echo "Descrizione : ".$product->description ?> </p>
+                            </div>
+                        </div>
+                    </div>
+                <?php } ?>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
